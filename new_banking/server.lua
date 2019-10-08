@@ -18,7 +18,7 @@ AddEventHandler('bank:deposit', function(amount)
 				bank = bank + amount
 				vRP.setBankMoney({user_id, bank})
 			else
-				TriggerClientEvent('chatMessage', source, "Du har ikke nok penge på dig")
+				TriggerClientEvent('chatMessage', source, "You do not have enough money")
 			end
 		end
 	end
@@ -57,10 +57,10 @@ AddEventHandler('bank:transfer', function(target_id, amountt)
 		target_balance = vRP.getBankMoney({target_id})
 
 		if tonumber(user_id) == tonumber(target_id) then
-			TriggerClientEvent('chatMessage', source, "Du kan ikke overføre til dig selv!")
+			TriggerClientEvent('chatMessage', source, "You cannot transfer to yourself!")
 		else
 			if balance <= 0 or balance < tonumber(amountt) or tonumber(amountt) <= 0 then
-				TriggerClientEvent('chatMessage', source, "Du har ikke nok penge i banken..")
+				TriggerClientEvent('chatMessage', source, "You do not have enough money in the bank")
 			else
 				local user_bank = vRP.getBankMoney({user_id})
 				user_bank = user_bank - amountt
@@ -73,6 +73,6 @@ AddEventHandler('bank:transfer', function(target_id, amountt)
 
 		end
 	else
-		TriggerClientEvent('chatMessage', source, "Spilleren er ikke tilgængelig.")
+		TriggerClientEvent('chatMessage', source, "The player is unavailable.")
 	end
 end)
