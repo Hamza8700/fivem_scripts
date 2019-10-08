@@ -114,10 +114,10 @@ if bankMenu then
 		while true do
 			Citizen.Wait(0)
 		if nearBank() then
-				DisplayHelpText("Tryk på ~INPUT_PICKUP~ for tilgå din ~b~bank-konto~s~")
+				DisplayHelpText("Press ~INPUT_PICKUP~ to access ~b~bank account~s~")
 
 			if IsControlJustPressed(1, 38) then
-				exports['progressBars']:startUI(2500, "TILGÅR BANK-KONTO")
+				exports['progressBars']:startUI(2500, "ACCESSING BANK ACCOUNT")
 				playAnim('mp_common', 'givetake1_a', 2500)
 				Citizen.Wait(2500)
 				inMenu = true
@@ -128,11 +128,11 @@ if bankMenu then
 			end
 		end
 		if nearATM() then
-				DisplayHelpText("Tryk på ~INPUT_PICKUP~ for at bruge ~b~ATM~s~")
+				DisplayHelpText("Press ~INPUT_PICKUP~ to use ~b~ATM~s~")
 
 			if IsControlJustPressed(1, 38) then
 				if not IsPedInAnyVehicle(GetPlayerPed(-1)) then
-					exports['progressBars']:startUI(2500, "SÆTTER KORT I ATM")
+					exports['progressBars']:startUI(2500, "PUTTING CARD INTO ATM")
 					playAnim('mp_common', 'givetake1_a', 2500)
 					Citizen.Wait(2500)
 					inMenu = true
@@ -141,7 +141,7 @@ if bankMenu then
 					TriggerServerEvent('bank:balance')
 					local ped = GetPlayerPed(-1)
 				else
-					TriggerEvent("pNotify:SendNotification",{text = "Du kan ~ikke tilgå en ATM fra et køretøj!",type = "warning",timeout = (3000),layout = "centerLeft",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+					TriggerEvent("pNotify:SendNotification",{text = "You cannot use an ATM from a vehicle!",type = "warning",timeout = (3000),layout = "centerLeft",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 				end	
 			end
 		end
@@ -149,7 +149,7 @@ if bankMenu then
 
 			if IsControlJustPressed(1, 38) then
 				if not IsPedInAnyVehicle(GetPlayerPed(-1)) then
-					exports['progressBars']:startUI(2500, "SÆTTER KORT I ATM")
+					exports['progressBars']:startUI(2500, "PUTTING CARD INTO ATM")
 					playAnim('mp_common', 'givetake1_a', 2500)
 					Citizen.Wait(2500)
 					inMenu = true
@@ -158,7 +158,7 @@ if bankMenu then
 					TriggerServerEvent('bank:balance')
 					local ped = GetPlayerPed(-1)
 				else
-					TriggerEvent("pNotify:SendNotification",{text = "Du kan ~ikke tilgå en ATM fra et køretøj!",type = "warning",timeout = (3000),layout = "centerLeft",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+					TriggerEvent("pNotify:SendNotification",{text = "You cannot use an ATM from a vehicle!",type = "warning",timeout = (3000),layout = "centerLeft",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 				end		
 			end
 		end
@@ -301,7 +301,7 @@ function nearAtmHackable()
 		local distance = GetDistanceBetweenCoords(search.x, search.y, search.z, playerloc['x'], playerloc['y'], playerloc['z'], true)
 
 		if distance <= 2 then
-			DrawText3Ds(search.x, search.y,search.z, "Tryk på ~g~[E]~s~ for ~b~ATM~s~. Tryk på ~g~[G]~s~ for at ~r~Hacke~s~") 
+			DrawText3Ds(search.x, search.y,search.z, "Press ~g~[E]~s~ for ~b~ATM~s~. Press ~g~[G]~s~ to ~r~Hack~s~") 
 			return true
 		end
 	end
