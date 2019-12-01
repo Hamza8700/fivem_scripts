@@ -1,0 +1,18 @@
+Locales['en'] = {
+  ['male'] = 'Mand',
+  ['female'] = 'Kvinde',
+  ['carjack'] = '^2 10-15 ^0 på en ^5%s^0 ved ^5%s^0',
+  ['combat'] = '^2 Muligvis vold/slåskamp ved ^5%s^0',
+  ['gunshot'] = '^1 10-13 ^0 ved ^5%s^0',
+  ['drugsale'] = '^3 10-65 ved ^5%s^0',
+  ['atmhack'] = '^3 10-90 ^0 på en ATM ved ^5%s^0',
+  ['robnpc'] = '^3 10-90 ^0 mod en person ved ^5%s^0',
+  ['holdup'] = '^3 10-90 ^0 i en butik ved ^5%s^0',
+  --['carjack'] = '^2Biltyveri i gang^0: en ^5%s^0 er blevet set i at stjæle en ^5%s^0 ved ^5%s^0',
+  --['combat'] = '^2Slåskamp i gang^0: en ^5%s^0 er blevet set i at opføre sig voldeligt ved ^5%s^0',
+  --['gunshot'] = '^1Skyderi i gang^0: en ^5%s^0 er blevet set i at skyde med et våben ved ^5%s^0',
+  --['drugsale'] = '^3Drugsale i gang^0: en ^5%s^0 har forsøgt at sælge stoffer ved ^5%s^0',
+  --['atmhack'] = '^3ATM Røveri er i gang^0: en ^5%s^0 har forsøgt at hacke en ATM ved ^5%s^0',
+  --['robnpc'] = '^3Gaderøveri er i gang^0: en ^5%s^0 truer mig med våben, for mine ejendele ved ^5%s^0',
+  --['holdup'] = '^3Butiksrøveri er i gang^0: en ^5%s^0 er i gang med at røve en butik ved ^5%s^0',
+}
