@@ -8,6 +8,7 @@ Config.Timer = 1
 -- Set if show alert when player use Function
 Config.GunshotAlert = true
 Config.ATMAlert = true
+Config.TruckRobberyAlert = true
 Config.RobNPCAlert = true
 Config.HoldUpAlert = true
 Config.CarJackingAlert = true
@@ -16,7 +17,7 @@ Config.DrugAlert = true
 
 -- In seconds
 Config.BlipGunTime = 30
-Config.BlipATMTime = 30
+Config.BlipTruckRobberyTime = 30
 Config.BlipMeleeTime = 7
 Config.BlipRobNPCTime = 15
 Config.BlipHoldUpTime = 30
@@ -25,7 +26,7 @@ Config.BlipDrugTime = 15
 
 -- Blip radius, in float value!
 Config.BlipGunRadius = 50.0
-Config.BlipATMRadius = 40.0
+Config.BlipTruckRobberyRadius = 40.0
 Config.BlipMeleeRadius = 50.0
 Config.BlipRobNPCRadius = 100.0
 Config.BlipHoldUpRadius = 100.0

@@ -166,6 +166,30 @@ AddEventHandler('esx_outlawalert:AtmHackInProgress', function(targetCoords)
 	end
 end)
 
+RegisterNetEvent('esx_outlawalert:TruckRobberyInProgress')
+AddEventHandler('esx_outlawalert:TruckRobberyInProgress', function(targetCoords)
+	if isPlayerWhitelisted and Config.GunshotAlert then
+		local alpha = 250
+		local gunshotBlip = AddBlipForRadius(targetCoords.x, targetCoords.y, targetCoords.z, Config.BlipGunRadius)
+
+		SetBlipHighDetail(gunshotBlip, true)
+		SetBlipColour(gunshotBlip, 1)
+		SetBlipAlpha(gunshotBlip, alpha)
+		SetBlipAsShortRange(gunshotBlip, true)
+
+		while alpha ~= 0 do
+			Citizen.Wait(Config.BlipGunTime * 4)
+			alpha = alpha - 1
+			SetBlipAlpha(gunshotBlip, alpha)
+
+			if alpha == 0 then
+				RemoveBlip(gunshotBlip)
+				return
+			end
+		end
+	end
+end)
+
 RegisterNetEvent('esx_outlawalert:RobNPCInProgress')
 AddEventHandler('esx_outlawalert:RobNPCInProgress', function(targetCoords)
 	if isPlayerWhitelisted and Config.RobNPCAlert then

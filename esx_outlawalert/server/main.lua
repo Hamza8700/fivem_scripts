@@ -62,6 +62,18 @@ AddEventHandler('esx_outlawalert:AtmHackInProgress', function(targetCoords, stre
 	TriggerClientEvent('esx_outlawalert:AtmHackInProgress', -1, targetCoords)
 end)
 
+RegisterServerEvent('esx_outlawalert:TruckRobberyInProgress')
+AddEventHandler('esx_outlawalert:TruckRobberyInProgress', function(targetCoords, streetName)
+	if playerGender == 0 then
+		playerGender = _U('male')
+	else
+		playerGender = _U('female')
+	end
+
+	TriggerClientEvent('esx_outlawalert:outlawNotify', -1, _U('truckrobbery', streetName))
+	TriggerClientEvent('esx_outlawalert:TruckRobberyInProgress', -1, targetCoords)
+end)
+
 RegisterServerEvent('esx_outlawalert:RobNPCInProgress')
 AddEventHandler('esx_outlawalert:RobNPCInProgress', function(targetCoords, streetName)
 	if playerGender == 0 then
